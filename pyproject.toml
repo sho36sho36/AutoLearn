@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autolearn"
+version = "1.0.0"
+description = "A lightweight AutoML-style machine learning CLI for CSV data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+authors = [
+    {name = "AutoLearn Contributors"}
+]
+
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scikit-learn>=1.8",
+    "joblib>=1.4"
+]
+
+[project.scripts]
+autolearn = "autolearn.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
